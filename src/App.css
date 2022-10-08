@@ -13,6 +13,12 @@
   }
 }
 
+.footer{
+  bottom: 5px;
+  color: blue;
+  left: 600px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,3 +42,5 @@
     transform: rotate(360deg);
   }
 }
+
+
