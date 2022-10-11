@@ -25,5 +25,12 @@ public interface EmployerService {
 	List<Employer> getEmployerByOrganization(String organizationName);
 
 	List<Employer> getAllEmployers();
+	
+	List<JobSeeker> getAllJobSeekers();
+	
+	public Employer update(Integer id, Employer employer);
+	
+	Employer getEmployerById(Integer employerId);
+	
 
 }

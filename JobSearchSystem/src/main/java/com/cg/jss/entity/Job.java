@@ -42,6 +42,11 @@ public class Job {
 	@Column(name="job_title")
 	private String title;
 	
+	@NotBlank(message = "Company must not be null and empty")
+	@Column(name="company")
+	private String company;
+	
+	
 	@NotBlank(message = "Location must not be null and empty")
 	@Column(name="location")
 	private String location;

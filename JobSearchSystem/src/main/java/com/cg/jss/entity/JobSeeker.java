@@ -29,7 +29,7 @@ import lombok.NoArgsConstructor;
 public class JobSeeker {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonIgnore()
+	
 	@Column(name="id")
 	private Integer jobseeker_Id;
 	@NotBlank(message = "Name must not be null and empty")
@@ -58,6 +58,7 @@ public class JobSeeker {
 	@JsonIgnore
 	@OneToMany(mappedBy = "jobseeker")
 	private List<AppliedJobs> appliedjobs;
+	
 	
 	@OneToMany(mappedBy = "jobSeeker")
 	private List<Skillset> skillSet;

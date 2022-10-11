@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 public class Employer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonIgnore
+	
 	@Column(name="id")
 	private Integer id;
 	@NotBlank(message = "Organization Name must not be null and empty")

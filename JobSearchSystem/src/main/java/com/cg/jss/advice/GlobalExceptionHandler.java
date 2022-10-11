@@ -1,4 +1,4 @@
-package com.cg.jss.advicer;
+package com.cg.jss.advice;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

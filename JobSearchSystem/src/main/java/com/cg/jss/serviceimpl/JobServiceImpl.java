@@ -34,10 +34,12 @@ public class JobServiceImpl implements JobService{
 		oldjob.setContactNo(job.getContactNo());
 		oldjob.setDescription(job.getDescription());
 		oldjob.setEmail(job.getEmail());
+		oldjob.setStatus(job.getStatus());
 		oldjob.setExperience(job.getExperience());
 		oldjob.setLocation(job.getLocation());
 		oldjob.setNoticePeriod(job.getNoticePeriod());
 		oldjob.setSalary(job.getSalary());
+		oldjob.setCompany(job.getCompany());
 		oldjob.setTitle(job.getTitle());
 		oldjob.setSkillSet(job.getSkillSet());
 		jobRepository.save(oldjob);

@@ -115,5 +115,28 @@ public class EmployerServiceImpl implements EmployerService {
 	public List<Employer> getAllEmployers() {
 		return employerRepository.findAll();
 	}
-
+	
+	@Override
+		public List<JobSeeker> getAllJobSeekers() {
+			return jobSeekerRepository.findAll();
+		}
+	
+	@Override
+	public Employer update(Integer id, Employer employer) {
+		// TODO Auto-generated method stub
+		Employer employerInfo=employerRepository.findById(id).orElseThrow(() -> new  EmployerNotFoundException("Employer not found"));
+		employerInfo.setOrganizationName(employer.getOrganizationName());
+		employerInfo.setAddress(employer.getAddress());
+		employerInfo.setContactNumber(employer.getContactNumber());
+		employerInfo.setEmail(employer.getEmail());
+		employerInfo.setUsername(employer.getUsername());
+		employerInfo.setPassword(employer.getPassword());
+		employerRepository.save(employerInfo);
+		return employerInfo;
+	}
+	@Override
+	public Employer getEmployerById(Integer employerId) {
+		Employer employer=employerRepository.findById(employerId).orElseThrow(()-> new EmployerNotFoundException("Employeer Not Found"));
+		return employer;
+	}
 }
