@@ -84,7 +84,7 @@ public class Job {
 	@Column(name="contactNo")
 	private String contactNo;
 	
-	@JsonIgnore
+	
 	@Column(name="favourite")
 	private Boolean favourite = Boolean.FALSE; 
 	
